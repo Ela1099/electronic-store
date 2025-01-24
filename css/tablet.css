@@ -1,0 +1,210 @@
+
+
+
+
+.container{
+    max-width: 680px;
+    position: relative;
+    
+}
+
+
+.header-bc{
+    display: none;
+}
+header{
+    margin-bottom: 50px;
+ }
+
+ .search-title{
+    font-size: 32px;
+    
+ }
+
+.card{
+    
+    width:47%;
+}
+
+
+
+.header-menu.open .menu {
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color:#ffffff;
+   
+
+  
+
+    padding-top: 30px;
+    padding-left: 20px;
+ 
+  
+    margin-top: 0;
+    z-index: 50000;
+    height: 100%;
+    font-size: 25px;
+    font-family:"Montserrat-Regular", sans-serif;
+    text-transform: uppercase;
+    
+    animation: burgerAnimation 0.4s;
+    
+   
+   
+}
+
+
+.menu,.basket{
+    display: none;
+    
+   
+}
+.header-menu.open .menu .menu-item .menu-item-links{
+    font-size: 18px;
+   
+    color: #000000;
+    text-transform: uppercase;
+   
+    
+}
+.header-men.open .menu{
+text-align: center;}
+
+
+
+.header-men.open{
+    position: relative;
+    width: 100%;
+    z-index: 50000;
+    }
+
+    @keyframes burgerAnimation{
+        from {opacity: 0;}
+        to{ opacity: 1;}
+        }
+       
+  
+    .burger-checkbox {
+        display: block;
+        position: absolute;
+        width:40px ;
+        height: 40px;
+        right:20px;
+        background: transparent;
+        z-index: 510000;
+        border:none;
+        cursor: pointer;
+        
+      
+      }
+      .header-men.open .burger-checkbox {
+        display: block;
+        position: fixed;
+        top:30px;
+        right:30px;
+        
+        z-index: 510000;
+        border:none;
+        cursor: pointer;
+        
+      
+      }
+
+      
+      .icon{
+        width: 30px;
+        height: 30px;
+    }
+ 
+  .menu-item{
+    font-size: 30px;
+}    
+
+
+.icon{
+    width: 30px;
+    height: 30px;
+}
+
+
+/* .footer{
+    flex-direction: column;
+
+} */
+.footer, .footer-mobile{
+    display: none;
+}
+
+.footer-tablet{
+    display: flex;
+   
+    
+flex-wrap: wrap;
+    padding: 50px 0px;
+    grid-column: 42px;
+}
+
+.container-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    }
+
+    .footer-logo{
+        margin-bottom: 33px;
+    }
+    .footer-adress-info{
+       
+        width: 36%;
+       
+        
+    }
+
+    .footer-contacts-info{
+     
+        width: 36%;
+    }
+
+    .info-item{
+        margin-bottom:107px ;
+    }
+    .footer-service-info{
+       
+        margin-bottom: 40px;
+    }
+
+    .item-link{
+        margin-bottom: 30px;
+    }
+
+    .container-info.last{
+        display: flex;
+        align-items: center;
+
+        justify-content: space-between;
+        
+    }
+    .footer-doc p{
+        text-align: left;
+    }
+
+    .footer-payCard{
+        margin-top: 0px;
+        
+        max-height: 25px;
+        max-width: 32%;
+    }
+
+    .container-info.last .footer-doc{
+        max-width: 56%;
+    }
+    
+
+   
