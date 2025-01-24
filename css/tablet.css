@@ -47,7 +47,13 @@ header{
     font-size: 12px;
 }
 
+.card-image .image:hover{
 
+    cursor: pointer;
+   transform: none;
+ 
+  
+}  
 
 .header-menu.open .menu {
     position: fixed;
