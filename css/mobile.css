@@ -36,16 +36,8 @@ row-gap: 30px;
     width:48%;
 }
 
-.card-image:hover{
-    display: none;
-}
 
-.card-button-bc{
-    display: none;}
 
-.card-button-bc.appear {
-    display: none;
-}
 
 .card-title{
     font-size: 16px;
@@ -65,6 +57,17 @@ row-gap: 30px;
     
     margin-bottom: 24px;
 }
+
+/* .card-button-bc {
+    display:none; /* Изначально скрываем на мобильных */
+
+/* .card-button-bc.appear {
+    display:block;
+    opacity: 1;
+    visibility: visible;
+     transition: opacity 0.3s ease, visibility 0s linear 0s;
+
+}  */
 
 .card-promotion{
     position: absolute;

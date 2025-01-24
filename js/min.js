@@ -1,4 +1,32 @@
+// const cards = document.querySelectorAll('.card');
+
+// function toggleAppear(element, add) {
+//     if (element) {
+//         if (add) {
+//             element.classList.add('appear');
+//         } else {
+//             element.classList.remove('appear');
+//         }
+//     }
+// }
+
+
+// cards.forEach(card => {
+//     const butonAppearCard = card.querySelector('#butonAppearCard');
+
+
+//     card.addEventListener("mouseenter", () => {
+//         toggleAppear(butonAppearCard, true);
+//     });
+
+//     card.addEventListener("mouseleave", () => {
+//         toggleAppear(butonAppearCard, false);
+//     });
+// });
+
 const cards = document.querySelectorAll('.card');
+const tabletBreakpoint = 770; // Граница для мобильных
+ // Граница для планшетов
 
 function toggleAppear(element, add) {
     if (element) {
@@ -10,19 +38,57 @@ function toggleAppear(element, add) {
     }
 }
 
+function setupMobileListeners() {
+    cards.forEach(card => {
+        const butonAppearCard = card.querySelector('#butonAppearCard');
 
-cards.forEach(card => {
-    const butonAppearCard = card.querySelector('#butonAppearCard');
-
-
-    card.addEventListener("mouseenter", () => {
-        toggleAppear(butonAppearCard, true);
+        card.addEventListener("click", () => {
+            toggleAppear(butonAppearCard, undefined); // Используем toggle для click
+        });
     });
+}
 
-    card.addEventListener("mouseleave", () => {
-        toggleAppear(butonAppearCard, false);
+function setupDesktopListeners() {
+  cards.forEach(card => {
+      const butonAppearCard = card.querySelector('#butonAppearCard');
+
+      card.addEventListener("mouseenter", () => {
+          toggleAppear(butonAppearCard, true);
+      });
+
+      card.addEventListener("mouseleave", () => {
+           toggleAppear(butonAppearCard, false);
+        });
     });
-});
+}
+
+function removeAllListeners() {
+    cards.forEach(card => {
+        const butonAppearCard = card.querySelector('#butonAppearCard');
+
+        card.removeEventListener('click', () => { });
+        card.removeEventListener('mouseenter', () => { });
+        card.removeEventListener('mouseleave', () => { });
+       butonAppearCard.classList.remove('appear');
+    });
+}
+
+function checkScreenSize() {
+    removeAllListeners(); // Сначала убираем все слушатели
+    // if (window.innerWidth <= mobileBreakpoint) {
+    //     setupMobileListeners(); // Мобильные
+    // } else 
+    
+    if(window.innerWidth <= tabletBreakpoint) {
+         setupMobileListeners(); // Планшеты - работают как мобильные
+    }
+    else {
+        setupDesktopListeners(); // Компьютеры
+    }
+}
+
+checkScreenSize();
+window.addEventListener('resize', checkScreenSize);
 
 
 
