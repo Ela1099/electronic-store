@@ -29,6 +29,25 @@ header{
 .card-button-bc{
     padding: 20px 15px;
 }
+.card-button{
+    text-align: center;
+    overflow:hidden;
+    
+    border: none;
+    outline: none;
+    
+    padding: 12px 20px;
+    border-radius: 50px;
+    background-color: #E45302;
+    max-width: 100%;
+
+    color:#ffffff;
+    font-family:var(--regular-text),sans-serif ;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+
 
 .header-menu.open .menu {
     position: fixed;
