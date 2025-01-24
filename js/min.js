@@ -119,20 +119,37 @@ navLinks.forEach(link => {
 
 
 
+const mobileBreakpoint = 390;
+const cardImages = document.querySelectorAll('.card-image');
 
- const cardImages = document.querySelectorAll('.card-image'); // Получаем все элементы с классом card-image
-
- cardImages.forEach(cardImage => {
-     const carImgChange = cardImage.querySelector('#carImgChange'); // Находим изображение внутри card-image
-     const originalSrc = carImgChange.src; // Сохраняем исходный src
+function setupMobileListeners(cardImage) {
+    const carImgChange = cardImage.querySelector('#carImgChange');
+    const originalSrc = carImgChange.src;
 
     cardImage.onclick = () => {
-         if (carImgChange.classList.contains('change')) {
-             carImgChange.classList.remove('change');
-             carImgChange.src = originalSrc; // Возвращаем исходный src
-         } else {
-             carImgChange.classList.add('change');
-             carImgChange.src = "imdge/img.png";
-         }
-     };
- });
+        if (carImgChange.classList.contains('change')) {
+            carImgChange.classList.remove('change');
+            carImgChange.src = originalSrc;
+        } else {
+            carImgChange.classList.add('change');
+            carImgChange.src = "imdge/img.png";
+        }
+    };
+}
+
+
+
+function checkScreenSize() {
+    cardImages.forEach(cardImage => {
+    if (window.innerWidth <= mobileBreakpoint) {
+          setupMobileListeners(cardImage);
+      } 
+  });
+}
+
+// Вызываем checkScreenSize при загрузке страницы
+checkScreenSize();
+
+// Вызываем checkScreenSize при изменении размера окна
+window.addEventListener('resize', checkScreenSize);
+

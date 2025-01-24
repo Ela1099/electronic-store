@@ -26,7 +26,9 @@ header{
     width:47%;
 }
 
-
+.card-button-bc{
+    padding: 20px 15px;
+}
 
 .header-menu.open .menu {
     position: fixed;
@@ -143,6 +145,8 @@ text-align: center;}
 .footer, .footer-mobile{
     display: none;
 }
+
+
 
 .footer-tablet{
     display: flex;

@@ -37,7 +37,27 @@ row-gap: 30px;
 }
 
 
+.card-button-bc{
+    padding: 5px 8px;
+}
 
+.card-button{
+    text-align: center;
+    overflow:hidden;
+    
+    border: none;
+    outline: none;
+    
+    padding: 12px 20px;
+    border-radius: 50px;
+    background-color: #E45302;
+    max-width: 100%;
+
+    color:#ffffff;
+    font-family:var(--regular-text),sans-serif ;
+    font-weight: 500;
+    font-size: 12px;
+}
 
 .card-title{
     font-size: 16px;

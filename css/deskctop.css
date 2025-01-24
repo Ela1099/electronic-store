@@ -222,7 +222,8 @@ overflow: hidden;
     color: black;
     font-family:var(--bold-text),sans-serif ;
     font-weight: bold;
-    position: relative;
+     
+    
 }
 
 
@@ -232,21 +233,26 @@ overflow: hidden;
     overflow: hidden;
     border-radius: 20px;
     margin-bottom: 20px;
-   position: relative;
-    
-    
+ 
+    border: 1px rgb(255, 255, 255) solid;
+ position: relative;
 }
+    
+
 .image{
+    display: block;
     max-width: 100%;
     object-fit: cover;
     object-position: center;
+    
 }
 
   .card-image .image:hover{
- 
+
     cursor: pointer;
    transform: scale(1.2);
    transition: transform 0.5s ease;
+  
 }  
 .card-promotion{
     position: absolute;
@@ -263,14 +269,19 @@ overflow: hidden;
 }
 
 .card-button-bc{
+    text-align: center;
+    overflow: visible;
 position: absolute;
-display: block;
+display: inline-block;
+max-width: 100%;
 opacity: 0;
 visibility: hidden; /* Изначально скрыт */
     transition: opacity 0.5s ease, visibility 0s linear 0s;
 
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
 
-bottom: 83px;
    border-bottom-right-radius: 20px;
    border-bottom-left-radius: 20px;
    padding: 20px 31px; 
@@ -280,7 +291,8 @@ bottom: 83px;
 }
 
 .card-button-bc.appear {
-    
+    overflow: hidden;
+    transform: translateX(1);
     opacity: 1;
     visibility: visible; /* Делаем видимым */
     transition: opacity 0.5s ease, visibility 0s linear 0s; /* Анимация прозрачности */
@@ -293,19 +305,20 @@ bottom: 83px;
 
 
 .card-button{
+    text-align: center;
+    overflow:hidden;
     
-    
-   
-    outline: none;
     border: none;
+    outline: none;
+    
     padding: 13px 87px;
     border-radius: 50px;
     background-color: #E45302;
-    
+    max-width: 100%;
 
     color:#ffffff;
     font-family:var(--regular-text),sans-serif ;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
 }
 
